@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "TowerOfTempus.API": {
+    "Characters.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
