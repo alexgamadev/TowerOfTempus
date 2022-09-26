@@ -17,4 +17,14 @@ public class CharacterTests
 
         Assert.Equal("Test", character.Name);
     }
+
+    [Fact]
+    public void CharacterService_CreateCharacter_HealthShouldBeSameAsMax()
+    {
+        var characterService = new CharacterService();
+
+        var character = characterService.CreateCharacter("Test");
+
+        Assert.Equal(character.Health, character.MaximumHealth);
+    }
 }

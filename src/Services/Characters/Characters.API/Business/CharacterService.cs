@@ -9,7 +9,9 @@ public class CharacterService : ICharacterService
         var character = new Character()
         {
             Name = name,
-            Experience = 0
+            Experience = 0,
+            MaximumHealth = 100,
+            Health = 100
         };
 
         return character;
