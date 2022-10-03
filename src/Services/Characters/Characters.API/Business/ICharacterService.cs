@@ -13,4 +13,11 @@ public interface ICharacterService
     /// <param name="name">The name of the character</param>
     /// <returns>A new character</returns>
     Character CreateCharacter(string name);
+
+    /// <summary>
+    /// Checks if a character name exists already
+    /// </summary>
+    /// <param name="name">The name to check</param>
+    /// <returns>Whether the name exists already</returns>
+    bool DoesCharacterNameExist(string name);
 }

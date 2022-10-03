@@ -8,7 +8,7 @@ public class Character
     /// <summary>
     /// Character ID
     /// </summary>
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = new Guid();
 
     /// <summary>
     /// Character name
@@ -33,5 +33,5 @@ public class Character
     /// <summary>
     /// A list of the characters skills
     /// </summary>
-    public List<Skill> Skills { get; set; } = new List<Skill>();
+    public List<CharacterSkill> Skills { get; set; } = new List<CharacterSkill>();
 }

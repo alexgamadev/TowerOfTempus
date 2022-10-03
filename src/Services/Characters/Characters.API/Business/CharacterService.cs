@@ -7,11 +7,7 @@ using Characters.API.DataAccess.Entities;
 /// </summary>
 public class CharacterService : ICharacterService
 {
-    /// <summary>
-    /// Creates a basic character
-    /// </summary>
-    /// <param name="name">The name of the character</param>
-    /// <returns>A new character</returns>
+    /// <inheritdoc/>
     public Character CreateCharacter(string name)
     {
         var character = new Character()
@@ -23,5 +19,11 @@ public class CharacterService : ICharacterService
         };
 
         return character;
+    }
+
+    /// <inheritdoc/>
+    public bool DoesCharacterNameExist(string name)
+    {
+        return true;
     }
 }

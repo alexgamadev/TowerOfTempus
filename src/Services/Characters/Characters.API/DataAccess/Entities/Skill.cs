@@ -19,9 +19,4 @@ public class Skill
     /// A description of the skill
     /// </summary>
     public string Description { get; set; } = String.Empty;
-
-    /// <summary>
-    /// The current experience for the skill
-    /// </summary>
-    public int Experience { get; set; } = 0;
 }
