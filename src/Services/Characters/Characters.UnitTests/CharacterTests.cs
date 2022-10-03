@@ -1,4 +1,5 @@
 ﻿using Characters.API.Business;
+using Characters.API.DataAccess.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ public class CharacterTests
     public void CharacterService_CreateCharacter_NameShouldMatch()
     {
         // Assert
-        var characterService = new CharacterService();
+        var charactersRepository = new InMemCharactersRepository();
+        var characterService = new CharacterService(charactersRepository);
 
         // Arrange
         var character = characterService.CreateCharacter("Test");
@@ -25,7 +27,8 @@ public class CharacterTests
     public void CharacterService_CreateCharacter_HealthShouldBeSameAsMax()
     {
         // Assert
-        var characterService = new CharacterService();
+        var charactersRepository = new InMemCharactersRepository();
+        var characterService = new CharacterService(charactersRepository);
 
         // Arrange
         var character = characterService.CreateCharacter("Test");
@@ -38,7 +41,8 @@ public class CharacterTests
     public void CharacterService_DoesCharacterNameExist_ReturnsCorrectResult()
     {
         // Assert
-        var characterService = new CharacterService();
+        var charactersRepository = new InMemCharactersRepository();
+        var characterService = new CharacterService(charactersRepository);
 
         // Act
         Assert.False(characterService.DoesCharacterNameExist("Test"));
@@ -48,7 +52,8 @@ public class CharacterTests
     public void CharacterService_DoesCharacterNameExist_ReturnsTrueIfExists()
     {
         // Assert
-        var characterService = new CharacterService();
+        var charactersRepository = new InMemCharactersRepository();
+        var characterService = new CharacterService(charactersRepository);
 
         // Arrange
         _ = characterService.CreateCharacter("Test");
